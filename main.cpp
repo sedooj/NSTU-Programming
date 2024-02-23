@@ -7,7 +7,7 @@ typedef struct Item
     struct Item *nextItem;
 };
 
-Item* getItemAddressByPosition(int position, struct Item *&head)
+Item *getItemAddressByPosition(int position, struct Item *&head)
 {
     if (position == 0)
     {
@@ -53,7 +53,7 @@ int getItemValueByPosition(int position, struct Item *&head)
     }
 }
 
-Item* getNextItemValueByPosition(int position, struct Item *&head)
+Item *getNextItemValueByPosition(int position, struct Item *&head)
 {
     if (position == 0)
     {
@@ -105,28 +105,33 @@ void insertDigitToPosition(int digit, int position, struct Item *&head)
     }
 }
 
-int deleteItemByPosition(int position, Item*& head) {
-    if (head == NULL) {
+int deleteItemByPosition(int position, Item *&head)
+{
+    if (head == NULL)
+    {
         printf("List is empty.");
         return -1;
     }
-    if (position == 0) {
-        Item* tempItem = head;
+    if (position == 0)
+    {
+        Item *tempItem = head;
         head = head->nextItem;
         delete tempItem;
         return 0;
     }
 
-    Item* previousItem = NULL;
-    Item* currentItem = head;
+    Item *previousItem = NULL;
+    Item *currentItem = head;
     int currentPosition = 0;
 
-    while (currentItem != NULL && currentPosition < position) {
+    while (currentItem != NULL && currentPosition < position)
+    {
         previousItem = currentItem;
         currentItem = currentItem->nextItem;
         currentPosition++;
     }
-    if (currentItem == NULL) {
+    if (currentItem == NULL)
+    {
         printf("\nIndex of bounds.");
         return -2;
     }
@@ -146,6 +151,18 @@ void displayList(Item *head)
     }
 }
 
+int getItemsCount(Item *head)
+{
+    int count = 0;
+    Item *currentItem = head;
+    while (currentItem != NULL)
+    {
+        currentItem = currentItem->nextItem;
+        count++;
+    }
+    return count;
+}
+
 int main()
 {
     Item *head = NULL;
@@ -158,6 +175,5 @@ int main()
     insertDigitToPosition(5, 5, head);
 
     displayList(head);
-
     return 0;
 }
