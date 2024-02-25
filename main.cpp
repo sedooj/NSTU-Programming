@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <random>
 
 typedef struct Item
 {
@@ -163,17 +163,17 @@ int getItemsCount(Item *head)
     return count;
 }
 
+void generateItems(int count, Item*& head) {
+    for (int i = 0; i < count; i++) {
+        int randDigit = rand() % 90 + 10;
+        insertDigitToPosition(randDigit, i, head);
+    }
+    displayList(head);
+}
+
 int main()
 {
     Item *head = NULL;
 
-    insertDigitToPosition(0, 0, head);
-    insertDigitToPosition(1, 1, head);
-    insertDigitToPosition(2, 2, head);
-    insertDigitToPosition(3, 3, head);
-    insertDigitToPosition(4, 4, head);
-    insertDigitToPosition(5, 5, head);
-
-    displayList(head);
     return 0;
 }
