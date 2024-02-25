@@ -9,8 +9,7 @@ typedef struct Item
     struct Item *nextItem;
 };
 
-Item *getItemAddressByPosition(int position, struct Item *&head)
-{
+Item* getItemDataByPosition(int position, struct Item*& head) {
     if (position == 0)
     {
         return head;
@@ -29,52 +28,6 @@ Item *getItemAddressByPosition(int position, struct Item *&head)
     } else
     {
         return item;
-    }
-}
-
-int getItemValueByPosition(int position, struct Item *&head)
-{
-    if (position == 0)
-    {
-        return head->value;
-    }
-    Item *item = head;
-    int currentPos = 0;
-    while (item != NULL && currentPos < position)
-    {
-        item = item->nextItem;
-        currentPos++;
-    }
-
-    if (item == NULL)
-    {
-        return NULL;
-    } else
-    {
-        return item->value;
-    }
-}
-
-Item *getNextItemValueByPosition(int position, struct Item *&head)
-{
-    if (position == 0)
-    {
-        return head->nextItem;
-    }
-    Item *item = head;
-    int currentPos = 0;
-    while (item != NULL && currentPos < position)
-    {
-        item = item->nextItem;
-        currentPos++;
-    }
-
-    if (item == NULL)
-    {
-        return NULL;
-    } else
-    {
-        return item->nextItem;
     }
 }
 
@@ -130,7 +83,7 @@ Item *generateItems(int count)
     return head;
 }
 
-int deleteItemByPosition(int position, Item *&head)
+int deleteItemByPosition(int position, struct Item *&head)
 {
     if (head == NULL)
     {
@@ -166,7 +119,7 @@ int deleteItemByPosition(int position, Item *&head)
     return 0;
 }
 
-Item *replaceItems(int targetValue, int newValue, Item *&head)
+Item *replaceItems(int targetValue, int newValue, struct Item *&head)
 {
     Item *lastReplacement = NULL;
     bool isReplaced = false;
@@ -200,7 +153,7 @@ int getItemsCount(Item *head)
     return count;
 }
 
-void copyReversedIntoAList(Item* sourceListHead, Item*& targetListHead) {
+void copyReversedIntoAList(struct Item* sourceListHead, struct Item*& targetListHead) {
     if (sourceListHead == NULL)
         return;
 
@@ -235,7 +188,6 @@ int show()
     /**
      * Input a targetValue and newValue for replacement
      * */
-
     int target;
     int newValue;
     printf("\nSend a target digit to replace in the list: ");
@@ -246,7 +198,6 @@ int show()
     /**
      * Replacement
      * */
-
     printf("\nLast replacement address: %p", replaceItems(target, newValue, list_1));
     printf("\nList with replacements:");
     displayList(list_1);
@@ -258,10 +209,10 @@ int show()
     Item *list_2 = generateItems(itemsCountForGenerate);
     displayList(list_2);
     printf("\nReversing...");
+
     /**
      * Copy list_2 with reverse to list_1
      * */
-
     copyReversedIntoAList(list_2, list_1);
     displayList(list_1);
     delete list_1;
