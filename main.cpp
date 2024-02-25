@@ -1,7 +1,6 @@
-#include <iostream>
+#include "lab-1/lab_1.h"
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    return show();
 }

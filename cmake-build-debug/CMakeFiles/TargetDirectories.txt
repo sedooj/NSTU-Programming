@@ -1,3 +1,6 @@
 C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/CMakeFiles/programming.dir
 C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/lab-1/CMakeFiles/lab-1.dir
+C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/lab-1/CMakeFiles/edit_cache.dir
+C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/lab-1/CMakeFiles/rebuild_cache.dir
