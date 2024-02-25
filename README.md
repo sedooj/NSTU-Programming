@@ -37,3 +37,6 @@
 2) `git --fetch` (либо просто `Update selected`).
 ## Как часто мне коммитить мои изменения
 Лучше лишний раз, чем ниразу.
+
+## Authors
+- [@sedooj](https://github.com/sedooj)
