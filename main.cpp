@@ -151,6 +151,17 @@ void displayList(Item *head)
     }
 }
 
+
+void replaceItems(int target, int newValue, Item*& head) {
+    Item* currentItem = head;
+    while (currentItem != NULL) {
+        if (currentItem->value == target) {
+            currentItem->value = newValue;
+        }
+        currentItem = currentItem->nextItem;
+    }
+}
+
 int getItemsCount(Item *head)
 {
     int count = 0;
@@ -174,6 +185,14 @@ void generateItems(int count, Item*& head) {
 int main()
 {
     Item *head = NULL;
-
+    generateItems(20, head);
+    int target;
+    int newValue;
+    printf("\nSend a target digit to replace in the list:");
+    scanf("%d", &target);
+    printf("\nSend a new value for a target %d:", target);
+    scanf("%d\n", &newValue);
+    replaceItems(target, newValue, head);
+    displayList(head);
     return 0;
 }
