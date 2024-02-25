@@ -10,6 +10,10 @@ typedef struct Item
 };
 
 Item* getItemDataByPosition(int position, struct Item*& head) {
+    if (position < 0) {
+        printf("\nSend a correct position.");
+        return NULL;
+    }
     if (position == 0)
     {
         return head;
@@ -33,6 +37,10 @@ Item* getItemDataByPosition(int position, struct Item*& head) {
 
 void insertDigitToPosition(int digit, int position, struct Item *&head)
 {
+    if (position < 0) {
+        printf("\nSend a correct position.");
+        return;
+    }
     struct Item *newItem = (struct Item *) malloc(sizeof(struct Item));
     newItem->value = digit;
     newItem->nextItem = NULL;
@@ -47,7 +55,9 @@ void insertDigitToPosition(int digit, int position, struct Item *&head)
     Item *current = head;
     for (int i = 0; i < position - 1 && current != NULL; ++i)
     {
-        current = current->nextItem;
+        if (current->nextItem != NULL) {
+            current = current->nextItem;
+        }
     }
 
     if (current != NULL)
@@ -85,6 +95,10 @@ Item *generateItems(int count)
 
 int deleteItemByPosition(int position, struct Item *&head)
 {
+    if (position < 0) {
+        printf("\nSend a correct position.");
+        return -3;
+    }
     if (head == NULL)
     {
         printf("List is empty.");
