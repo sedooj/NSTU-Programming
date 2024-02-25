@@ -117,10 +117,12 @@ void displayList(Item *head)
     }
 }
 
-Item* generateItems(int count) {
-    Item* head = NULL;
+Item *generateItems(int count)
+{
+    Item *head = NULL;
     srand(time(NULL));
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < count; i++)
+    {
         int randDigit = rand() % 90 + 10;
         insertDigitToPosition(randDigit, i, head);
     }
@@ -163,14 +165,18 @@ int deleteItemByPosition(int position, Item *&head)
     return 0;
 }
 
-Item* replaceItems(int targetValue, int newValue, Item*& head) {
-    Item* lastReplacement = NULL;
+Item *replaceItems(int targetValue, int newValue, Item *&head)
+{
+    Item *lastReplacement = NULL;
     bool isReplaced = false;
-    do {
+    do
+    {
         isReplaced = false;
-        Item* currentItem = head;
-        while (currentItem != nullptr) {
-            if (currentItem->value == targetValue) {
+        Item *currentItem = head;
+        while (currentItem != nullptr)
+        {
+            if (currentItem->value == targetValue)
+            {
                 currentItem->value = newValue;
                 lastReplacement = currentItem;
                 isReplaced = true;
@@ -193,6 +199,26 @@ int getItemsCount(Item *head)
     return count;
 }
 
+void copyReversedIntoAList(Item* sourceListHead, Item*& targetListHead) {
+    if (sourceListHead == NULL)
+        return;
+
+    copyReversedIntoAList(sourceListHead->nextItem, targetListHead);
+
+    Item* newItem = new Item();
+    newItem->value = sourceListHead->value;
+    newItem->nextItem = NULL;
+
+    if (targetListHead == NULL) {
+        targetListHead = newItem;
+    } else {
+        Item* current = targetListHead;
+        while (current->nextItem != NULL) {
+            current = current->nextItem;
+        }
+        current->nextItem = newItem;
+    }
+}
 
 int main()
 {
@@ -202,8 +228,8 @@ int main()
     int itemsCountForGenerate = 1;
     printf("Send items count to generate: ");
     scanf("%d", &itemsCountForGenerate);
-    Item *head = generateItems(itemsCountForGenerate);
-    displayList(head);
+    Item *list_1 = generateItems(itemsCountForGenerate);
+    displayList(list_1);
 
     /**
      * Input a targetValue and newValue for replacement
@@ -220,10 +246,25 @@ int main()
      * Replacement
      * */
 
-    printf("\nLast replacement address: %p", replaceItems(target, newValue, head));
+    printf("\nLast replacement address: %p", replaceItems(target, newValue, list_1));
     printf("\nList with replacements:");
-    displayList(head);
-    delete head;
+    displayList(list_1);
+
+    /**
+     * Generation a second list with ramdom digits
+     * */
+    printf("\nGenerating second list...");
+    Item *list_2 = generateItems(itemsCountForGenerate);
+    displayList(list_2);
+    printf("\nReversing...");
+    /**
+     * Copy list_2 with reverse to list_1
+     * */
+
+    copyReversedIntoAList(list_2, list_1);
+    displayList(list_1);
+    delete list_1;
+    delete list_2;
 
     return 0;
 }
