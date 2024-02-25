@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <ctime>
 
 typedef struct Item
 {
@@ -105,6 +106,27 @@ void insertDigitToPosition(int digit, int position, struct Item *&head)
     }
 }
 
+void displayList(Item *head)
+{
+    printf("\n");
+    Item *tempItem = head;
+    while (tempItem != NULL)
+    {
+        printf("%d ", tempItem->value);
+        tempItem = tempItem->nextItem;
+    }
+}
+
+Item* generateItems(int count) {
+    Item* head = NULL;
+    srand(time(NULL));
+    for (int i = 0; i < count; i++) {
+        int randDigit = rand() % 90 + 10;
+        insertDigitToPosition(randDigit, i, head);
+    }
+    return head;
+}
+
 int deleteItemByPosition(int position, Item *&head)
 {
     if (head == NULL)
@@ -141,25 +163,22 @@ int deleteItemByPosition(int position, Item *&head)
     return 0;
 }
 
-void displayList(Item *head)
-{
-    Item *tempItem = head;
-    while (tempItem != NULL)
-    {
-        printf("%d ", tempItem->value);
-        tempItem = tempItem->nextItem;
-    }
-}
-
-
-void replaceItems(int target, int newValue, Item*& head) {
-    Item* currentItem = head;
-    while (currentItem != NULL) {
-        if (currentItem->value == target) {
-            currentItem->value = newValue;
+Item* replaceItems(int targetValue, int newValue, Item*& head) {
+    Item* lastReplacement = NULL;
+    bool isReplaced = false;
+    do {
+        isReplaced = false;
+        Item* currentItem = head;
+        while (currentItem != nullptr) {
+            if (currentItem->value == targetValue) {
+                currentItem->value = newValue;
+                lastReplacement = currentItem;
+                isReplaced = true;
+            }
+            currentItem = currentItem->nextItem;
         }
-        currentItem = currentItem->nextItem;
-    }
+    } while (isReplaced);
+    return lastReplacement;
 }
 
 int getItemsCount(Item *head)
@@ -174,25 +193,37 @@ int getItemsCount(Item *head)
     return count;
 }
 
-void generateItems(int count, Item*& head) {
-    for (int i = 0; i < count; i++) {
-        int randDigit = rand() % 90 + 10;
-        insertDigitToPosition(randDigit, i, head);
-    }
-    displayList(head);
-}
 
 int main()
 {
-    Item *head = NULL;
-    generateItems(20, head);
+    /**
+     * Generation a new list with random digits
+     * */
+    int itemsCountForGenerate = 1;
+    printf("Send items count to generate: ");
+    scanf("%d", &itemsCountForGenerate);
+    Item *head = generateItems(itemsCountForGenerate);
+    displayList(head);
+
+    /**
+     * Input a targetValue and newValue for replacement
+     * */
+
     int target;
     int newValue;
-    printf("\nSend a target digit to replace in the list:");
+    printf("\nSend a target digit to replace in the list: ");
     scanf("%d", &target);
-    printf("\nSend a new value for a target %d:", target);
-    scanf("%d\n", &newValue);
-    replaceItems(target, newValue, head);
+    printf("Send a new value for a target %d: ", target);
+    scanf("%d", &newValue);
+
+    /**
+     * Replacement
+     * */
+
+    printf("\nLast replacement address: %p", replaceItems(target, newValue, head));
+    printf("\nList with replacements:");
     displayList(head);
+    delete head;
+
     return 0;
 }
