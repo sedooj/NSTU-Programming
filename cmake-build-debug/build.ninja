@@ -47,12 +47,12 @@ cmake_ninja_workdir = C$:/Users/MSI/CLionProjects/nstu/programming/cmake-build-d
 #############################################
 # Order-only phony target for programming
 
-build cmake_object_order_depends_target_programming: phony || cmake_object_order_depends_target_lab-1
+build cmake_object_order_depends_target_programming: phony || cmake_object_order_depends_target_practice-2
 
 build CMakeFiles/programming.dir/main.cpp.obj: CXX_COMPILER__programming_unscanned_Debug C$:/Users/MSI/CLionProjects/nstu/programming/main.cpp || cmake_object_order_depends_target_programming
   DEP_FILE = CMakeFiles\programming.dir\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/MSI/CLionProjects/nstu/programming/lab-1
+  INCLUDES = -IC:/Users/MSI/CLionProjects/nstu/programming/practice-2
   OBJECT_DIR = CMakeFiles\programming.dir
   OBJECT_FILE_DIR = CMakeFiles\programming.dir
 
@@ -64,9 +64,9 @@ build CMakeFiles/programming.dir/main.cpp.obj: CXX_COMPILER__programming_unscann
 #############################################
 # Link the executable programming.exe
 
-build programming.exe: CXX_EXECUTABLE_LINKER__programming_Debug CMakeFiles/programming.dir/main.cpp.obj | lab-1/liblab-1.a || lab-1/liblab-1.a
+build programming.exe: CXX_EXECUTABLE_LINKER__programming_Debug CMakeFiles/programming.dir/main.cpp.obj | practice-2/libpractice-2.a || practice-2/libpractice-2.a
   FLAGS = -g
-  LINK_LIBRARIES = lab-1/liblab-1.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = practice-2/libpractice-2.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\programming.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -103,66 +103,66 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target lab-1
+# Object build statements for STATIC_LIBRARY target practice-2
 
 
 #############################################
-# Order-only phony target for lab-1
+# Order-only phony target for practice-2
 
-build cmake_object_order_depends_target_lab-1: phony || lab-1/CMakeFiles/lab-1.dir
+build cmake_object_order_depends_target_practice-2: phony || practice-2/CMakeFiles/practice-2.dir
 
-build lab-1/CMakeFiles/lab-1.dir/lab_1.cpp.obj: CXX_COMPILER__lab-1_unscanned_Debug C$:/Users/MSI/CLionProjects/nstu/programming/lab-1/lab_1.cpp || cmake_object_order_depends_target_lab-1
-  DEP_FILE = lab-1\CMakeFiles\lab-1.dir\lab_1.cpp.obj.d
+build practice-2/CMakeFiles/practice-2.dir/practice_2.cpp.obj: CXX_COMPILER__practice-2_unscanned_Debug C$:/Users/MSI/CLionProjects/nstu/programming/practice-2/practice_2.cpp || cmake_object_order_depends_target_practice-2
+  DEP_FILE = practice-2\CMakeFiles\practice-2.dir\practice_2.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/MSI/CLionProjects/nstu/programming/lab-1
-  OBJECT_DIR = lab-1\CMakeFiles\lab-1.dir
-  OBJECT_FILE_DIR = lab-1\CMakeFiles\lab-1.dir
+  INCLUDES = -IC:/Users/MSI/CLionProjects/nstu/programming/practice-2
+  OBJECT_DIR = practice-2\CMakeFiles\practice-2.dir
+  OBJECT_FILE_DIR = practice-2\CMakeFiles\practice-2.dir
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target lab-1
+# Link build statements for STATIC_LIBRARY target practice-2
 
 
 #############################################
-# Link the static library lab-1\liblab-1.a
+# Link the static library practice-2\libpractice-2.a
 
-build lab-1/liblab-1.a: CXX_STATIC_LIBRARY_LINKER__lab-1_Debug lab-1/CMakeFiles/lab-1.dir/lab_1.cpp.obj
+build practice-2/libpractice-2.a: CXX_STATIC_LIBRARY_LINKER__practice-2_Debug practice-2/CMakeFiles/practice-2.dir/practice_2.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = lab-1\CMakeFiles\lab-1.dir
+  OBJECT_DIR = practice-2\CMakeFiles\practice-2.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = lab-1\liblab-1.a
-  TARGET_PDB = lab-1.a.dbg
+  TARGET_FILE = practice-2\libpractice-2.a
+  TARGET_PDB = practice-2.a.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build lab-1/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\MSI\CLionProjects\nstu\programming\cmake-build-debug\lab-1 && C:\Users\MSI\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+build practice-2/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\MSI\CLionProjects\nstu\programming\cmake-build-debug\practice-2 && C:\Users\MSI\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build lab-1/edit_cache: phony lab-1/CMakeFiles/edit_cache.util
+build practice-2/edit_cache: phony practice-2/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build lab-1/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\MSI\CLionProjects\nstu\programming\cmake-build-debug\lab-1 && C:\Users\MSI\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\MSI\CLionProjects\nstu\programming -BC:\Users\MSI\CLionProjects\nstu\programming\cmake-build-debug"
+build practice-2/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\MSI\CLionProjects\nstu\programming\cmake-build-debug\practice-2 && C:\Users\MSI\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\MSI\CLionProjects\nstu\programming -BC:\Users\MSI\CLionProjects\nstu\programming\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build lab-1/rebuild_cache: phony lab-1/CMakeFiles/rebuild_cache.util
+build practice-2/rebuild_cache: phony practice-2/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Target aliases.
 
-build lab-1: phony lab-1/liblab-1.a
+build libpractice-2.a: phony practice-2/libpractice-2.a
 
-build liblab-1.a: phony lab-1/liblab-1.a
+build practice-2: phony practice-2/libpractice-2.a
 
 build programming: phony programming.exe
 
@@ -174,14 +174,14 @@ build programming: phony programming.exe
 #############################################
 # Folder: C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug
 
-build all: phony programming.exe lab-1/all
+build all: phony programming.exe practice-2/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/lab-1
+# Folder: C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/practice-2
 
-build lab-1/all: phony lab-1/liblab-1.a
+build practice-2/all: phony practice-2/libpractice-2.a
 
 # =============================================================================
 # Built-in targets
@@ -190,14 +190,14 @@ build lab-1/all: phony lab-1/liblab-1.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/MSI/CLionProjects/nstu/programming/CMakeLists.txt C$:/Users/MSI/CLionProjects/nstu/programming/lab-1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/MSI/CLionProjects/nstu/programming/CMakeLists.txt C$:/Users/MSI/CLionProjects/nstu/programming/practice-2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/MSI/CLionProjects/nstu/programming/CMakeLists.txt C$:/Users/MSI/CLionProjects/nstu/programming/lab-1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
+build C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/MSI/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/MSI/CLionProjects/nstu/programming/CMakeLists.txt C$:/Users/MSI/CLionProjects/nstu/programming/practice-2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
 
 
 #############################################

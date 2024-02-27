@@ -1,6 +1,6 @@
-/Users/Sedoj/CLionProjects/NSTU-Programming/cmake-build-debug/CMakeFiles/programming.dir
-/Users/Sedoj/CLionProjects/NSTU-Programming/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/Sedoj/CLionProjects/NSTU-Programming/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/Sedoj/CLionProjects/NSTU-Programming/cmake-build-debug/practic-1/CMakeFiles/practic-1.dir
-/Users/Sedoj/CLionProjects/NSTU-Programming/cmake-build-debug/practic-1/CMakeFiles/edit_cache.dir
-/Users/Sedoj/CLionProjects/NSTU-Programming/cmake-build-debug/practic-1/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/CMakeFiles/programming.dir
+C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/practice-2/CMakeFiles/practice-2.dir
+C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/practice-2/CMakeFiles/edit_cache.dir
+C:/Users/MSI/CLionProjects/nstu/programming/cmake-build-debug/practice-2/CMakeFiles/rebuild_cache.dir
